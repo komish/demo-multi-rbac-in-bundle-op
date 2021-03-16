@@ -1,0 +1,7 @@
+apiVersion: apps.example.com/v1beta1
+kind: CustomApplication
+metadata:
+  name: customapplication-sample
+spec:
+  # Add fields here
+  foo: bar

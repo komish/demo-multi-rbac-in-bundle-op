@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: apps-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: CustomApplication is the Schema for the customapplications API
+      displayName: Custom Application
+      kind: CustomApplication
+      name: customapplications.apps.example.com
+      version: v1beta1
+  description: Deploys a custom application
+  displayName: Custom Application Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - customapplication
+  links:
+  - name: Apps Operator
+    url: https://apps-operator.domain
+  maintainers:
+  - email: maintainers@example.com
+    name: maintainers
+  maturity: alpha
+  provider:
+    name: Custom Application Provider
+  version: 0.0.0
